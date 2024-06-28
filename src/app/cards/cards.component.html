@@ -1,0 +1,63 @@
+<h1 *ngIf="showHeader===true">
+  Our Top Picks
+</h1>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productList |filter:searchKey:'title'">
+      <div class="card  col-10 col-md-3 col-lg-2 col-xl-2">
+        <img src="{{item.image}}">
+
+
+        <h5 style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch ;">
+          {{item.title}}
+        </h5>
+        <p style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch ;">
+          {{item.description}}</p>
+        <p><strong>price:</strong> Rs.{{item.price}}</p>
+        
+        
+
+
+        <div class="btns"> <span><button class="btn btn-primary" routerLink="/checkout" type="button"> Buy Now</button>
+          </span> &nbsp; &nbsp;
+          <button class="btn btn-primary" (click)="addtoCart(item)" type="button" data-bs-toggle="modal"
+            data-bs-target="#myModal">Add Cart</button>
+
+        </div>
+
+
+      </div>
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">{{item.title}} added in your cart</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              Go to your cart to see the added products
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" routerLink="/cart">Go to your
+                cart</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  </div>
+</div>

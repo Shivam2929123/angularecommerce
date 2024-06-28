@@ -1,0 +1,99 @@
+
+
+<div class="container">
+    <div class="mt-2 p-2">
+    <h1 class="">Sign In</h1>
+</div>
+    <form [formGroup]="register" (ngSubmit)="GetData()" action="register.php" method="post">
+
+        <div class="form-group">
+            <label for="firstname">FirstName <span style="color: red;">*</span></label>
+            <div class="input-group-text">
+            <input type="text" name="firstname" class="form-control" placeholder="enter your first name"
+                style="text-align:center;" formControlName="fname"><br></div>
+               
+            <span style="color: red;" *ngIf="vfname&&vfname.invalid&&vfname.touched">Field is required</span>
+        </div>
+
+        <div class="form-group">
+            <label for="lastname">LastName<span style="color: red;">*</span></label>
+            <div class="input-group-text">
+            <input type="text" name="lastname" class="form-control" placeholder="enter your last name"
+                style="text-align:center" ng-model formControlName="lname"><br>
+                </div>
+            <span style="color: red;" *ngIf="vlname&&vlname.invalid&&vlname.touched">Field is required</span>
+        </div>
+
+        <div class="form-group">
+            <label for="DOB">DOB<span style="color: red;">*</span></label>
+            <div class="input-group-text">
+            <input type="date" name="date" class="form-control" style="text-align:center" ng-model
+                formControlName="dob"><br>
+            </div>
+            <span style="color: red;" *ngIf="vdob&&vdob.invalid&&vdob.touched">Field is required</span>
+
+        </div>
+
+        <div class="form-group">
+            <label for="mobile-number">Mobile Number<span style="color: red;">*</span></label>
+            <div class="input-group-text">
+            <input type="tel" name="Number" class="form-control" placeholder="706xxxxx50" style="text-align:center"
+                ng-model formControlName="phone"><br>
+            </div>
+            <span style="color: red;" *ngIf="vphone&&vphone.invalid&&vphone.touched">Field is required</span>
+
+
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email<span style="color: red;">*</span></label>
+            <div class="input-group-text">
+            <input type="email" name="email" class="form-control" placeholder="xyz@gmail.com" style="text-align:center"
+                ng-model formControlName="email"><br>
+            </div>
+            <span style="color: red;" *ngIf="vemail&&vemail.invalid&&vemail.touched">Invalid email</span>
+
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username<span style="color: red;">*</span></label>
+            <div class="input-group-text">
+            <input type="text" name="username" class="form-control" placeholder="username" style="text-align:center"
+                ng-model formControlName="username"><br>
+            </div>
+            <span style="color: red;" *ngIf="vusername&&vusername.invalid&&vusername.touched">Field is required</span>
+
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password<span style="color: red;">*</span></label>
+            <div class="input-group-text">
+           
+            <input type="password" name="password" class="form-control" placeholder="password" style="text-align:center"
+            ng-model formControlName="password"><br>
+            </div>
+            <span style="color: red;" *ngIf="vpassword&&vpassword.invalid&&vpassword.touched">invalid input, password
+                must have an uppercase, a lowercase,atleast one digit,atleast one special character</span>
+
+
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender:<span style="color: red;">*</span></label>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female<br>
+        </div>
+
+        <div class="form-group">
+            <button [disabled]="register.invalid" type="submit" value="submit" class="btn btn-primary">submit</button>
+        </div>
+
+
+
+
+    </form>
+    <button type="button" routerLink="/product-details">product details</button>
+    
+</div>
+
+

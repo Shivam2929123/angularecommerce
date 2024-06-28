@@ -1,0 +1,63 @@
+
+.container a{
+    text-decoration: none;
+}
+.card-body{
+    
+   justify-content: center;
+}
+
+h1{
+    padding-top: 1%;
+    text-align: center;
+}
+.card{
+    margin:20px;
+    padding: 20px;
+}
+
+
+
+.card img{
+    height: 25vh;
+    margin-bottom:15px ;
+    transition: 0.3s ease-in-out;
+}
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform:scale(1.1);
+}
+.btns{
+   display:flex;
+   flex-direction:row;
+   justify-content: center;
+   padding:5px;
+   text-align: justify;
+   cursor: pointer;
+      
+}
+.btn{
+   text-align: center;
+   font-size: 13px;
+   
+}
+span .btn{
+   
+}
+
+
+@media(max-width:480px) {
+    .card{
+        padding:20px;
+        margin-top:20px;
+        
+    
+    }
+}
+
+
+
+
+
+  
+

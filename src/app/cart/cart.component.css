@@ -1,0 +1,83 @@
+
+
+.card{
+    height: 70vh;
+    margin: 150px;
+    padding: 25px;
+}
+.center{
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform : translate(-50%,-50%);
+    text-align: center;
+}
+.center img{
+    transition: 1.5s ease;
+
+}
+.center img:hover{
+    transform:rotateY(150deg);
+    transition: 1.2s ease;
+    
+}
+
+
+.footer{
+    padding-top: 6%;
+}
+
+
+a{
+    text-decoration:none;
+}
+
+
+
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+}
+@media (max-width:480px){
+    .card h5{
+        z-index: 1;
+    }
+    .card{
+       
+        width:10px;
+        height: 500px;
+        
+        
+       
+    }
+
+    .center{
+        
+        position:relative;
+        z-index: 1;
+        margin-top: -400px;
+
+    }
+   
+ 
+    
+}
+@media (max-width:768px){
+
+    .card{
+        width:auto;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+
+}
+
+
+
+
+
+
+

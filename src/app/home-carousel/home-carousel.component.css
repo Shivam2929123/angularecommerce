@@ -1,0 +1,55 @@
+.carousel-inner{
+    height: 80vh;
+}
+
+.item, img{
+    min-height:100% !important;
+    width:  100%!important;
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:2%;
+    transition: 1.9s ease;
+
+}
+.item,img:hover{
+    filter:brightness(70%);
+
+    transition: 1.9s ease;
+  
+}
+.item,h1,p{
+    margin-bottom: 50%;
+    
+    
+    
+}
+.item,h5{
+    transition: 0.8s;
+}
+
+.item,h5:hover{
+    transition: 1.1s ease-in-out;
+    transform: scale(1.5);
+    color:red;
+
+}
+
+
+     
+ 
+@media screen and (max-width:950px) {
+    .carousel-inner{
+        height: 50vh;
+    }
+    
+     
+ }
+ @media screen and (max-width:680px) {
+    .carousel-inner{
+        height: 28vh;
+    }
+    
+     
+ }
