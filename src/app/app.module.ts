@@ -24,6 +24,7 @@ import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { allIcons } from 'ngx-bootstrap-icons';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 
@@ -47,6 +48,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     FilterPipe,
     CheckoutComponent,
     ProductDetailsComponent,
+    ProductDetailComponent,
     
    
     

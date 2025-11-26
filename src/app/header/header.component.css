@@ -4,3 +4,49 @@
 
 
 }
+.search-bar{
+    margin-top:50px ;
+    display: flex !important;
+    @media screen and (max-width: 599px) {
+        margin-top:0px ;
+    }
+}
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important; /* keeps it horizontal */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping if screen is too small */
+  gap: 10px;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 5px;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+/* Optional: adjust for very small screens */
+@media (max-width: 480px) {
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 5px 8px;
+    color: white;
+  }
+}

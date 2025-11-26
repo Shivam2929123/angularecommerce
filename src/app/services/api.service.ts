@@ -12,4 +12,10 @@ export class ApiService {
     return this.http.get<any>("http://localhost:3000/products")
    
 }
+getProductDetails(){
+  return this.http.get<any>("http://localhost:3000/product-details")
+}
+getProductById(id:any){
+  return this.http.get<any>("http://localhost:3000/product-details/"+id)
+}
 }

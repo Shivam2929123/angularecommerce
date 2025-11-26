@@ -1,0 +1,74 @@
+<div class="container" *ngIf="!loading && !error">
+
+  <div class="card" >
+    <div class="left">
+<div class="carousel-container">
+  <div class="carousel" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+    <img
+      *ngFor="let img of product.images"
+      [src]="img"
+      alt="Product image"
+      class="carousel-image"
+    />
+  </div>
+</div>
+
+<!-- Controls -->
+<div class="carousel-buttons">
+  <button (click)="prev()">&#10094;</button>
+  <button (click)="next()">&#10095;</button>
+</div>
+
+    </div>
+
+    <div class="right">
+      <h2>{{ product.title }}</h2>
+      <p class="brand">{{ product.brand }}</p>
+
+      <p class="description">{{ product.description }}</p>
+
+      <div class="price-rating">
+        <h3>₹ {{ product.price }}</h3>
+        <p class="rating">⭐ {{ product.rating[0]?.rate }} / 5  
+          <span class="count">({{ product.rating[0]?.count }} reviews)</span>
+        </p>
+      </div>
+
+      <button class="buy-btn">Buy Now</button>
+      <button class="cart-btn" (click)="addtoCart(product)"data-bs-toggle="modal"
+            data-bs-target="#myModal">Add to Cart</button>
+
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="loading" class="loading">Loading...</div>
+
+<div *ngIf="error" class="error">
+  Failed to load product details. Try again later.
+</div>
+ <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">{{product.title}} added in your cart</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              Go to your cart to see the added products
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" routerLink="/cart">Go to your
+                cart</button>
+            </div>
+
+          </div>
+        </div>
+      </div>

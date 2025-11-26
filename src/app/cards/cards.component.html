@@ -10,7 +10,7 @@
   <div class="row">
     <ng-container *ngFor="let item of productList |filter:searchKey:'title'">
       <div class="card  col-10 col-md-3 col-lg-2 col-xl-2">
-        <img src="{{item.image}}">
+        <img src="{{item.image}}" (click)="routeToProductDetail(item.id)">
 
 
         <h5 style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch ;">

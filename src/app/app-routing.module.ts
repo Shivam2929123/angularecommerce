@@ -13,6 +13,7 @@ import { CardsComponent } from './cards/cards.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SellerComponent } from './seller/seller.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   
@@ -72,7 +73,12 @@ const routes: Routes = [
   },
   {path:'product-details',
   component:ProductDetailsComponent
+  },
+  {
+    path:'product/:id',
+    component: ProductDetailComponent
   }
+  
 
 ];
 

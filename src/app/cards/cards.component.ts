@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { CartService } from '../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
@@ -13,7 +14,7 @@ export class CardsComponent implements OnInit{
   @Input() showHeader :any;
   public productList:any;
   searchKey:string="";
-    constructor(private api:ApiService,private cartService:CartService){};
+    constructor(private api:ApiService,private cartService:CartService,private router: Router){};
 
   
   ngOnInit(): void {
@@ -37,6 +38,10 @@ export class CardsComponent implements OnInit{
   addtoCart(item:any){
     this.cartService.addtoCart(item);
     
+
+  }
+  routeToProductDetail(id:number){
+    this.router.navigate(['/product', id])
 
   }
  
